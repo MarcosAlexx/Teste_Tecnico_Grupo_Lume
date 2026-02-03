@@ -8,31 +8,41 @@
 
 ## Como executar
 
-### Backend
+> Abra **dois terminais** separados, um para o backend e outro para o frontend.
+
+### 1. Backend (Terminal 1)
 
 ```bash
+# Acesse a pasta do backend
 cd Backend/lume
+
+# Linux / macOS
 ./mvnw spring-boot:run
-```
 
-No Windows:
-
-```bash
-cd Backend\lume
+# Windows
 mvnw.cmd spring-boot:run
 ```
 
-O backend será iniciado em `http://localhost:8080`.
+Aguarde até aparecer a mensagem `Started GroupLumeApplication`. O backend estará rodando em `http://localhost:8080`.
 
-### Frontend
+### 2. Frontend (Terminal 2)
 
 ```bash
+# Acesse a pasta do frontend
 cd Frontend/lume-frontend
+
+# Instale as dependências (apenas na primeira vez)
 npm install
+
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-O frontend será iniciado em `http://localhost:5173`.
+O frontend estará rodando em `http://localhost:5173`.
+
+### 3. Acessar a aplicação
+
+Com os dois servidores rodando, abra o navegador e acesse `http://localhost:5173` para a tela de login.
 
 ## Como acessar
 
