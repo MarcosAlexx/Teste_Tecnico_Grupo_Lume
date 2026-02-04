@@ -1,0 +1,12 @@
+services:
+  backend:
+    build: ./Backend/lume
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./Frontend/lume-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
