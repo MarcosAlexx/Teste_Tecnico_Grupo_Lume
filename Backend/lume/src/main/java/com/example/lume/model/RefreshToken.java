@@ -8,7 +8,6 @@ import lombok.Setter;
 
 import java.time.Instant;
 
-
 @Entity
 @Getter
 @Setter

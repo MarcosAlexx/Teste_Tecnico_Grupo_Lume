@@ -9,12 +9,11 @@ import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
 
 @Entity
-
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Clientes")
-@Getter
-@Setter
 public class Cliente {
 
     @Id
@@ -31,4 +30,5 @@ public class Cliente {
 
     @Embedded
     private Endereco endereco;
+
 }

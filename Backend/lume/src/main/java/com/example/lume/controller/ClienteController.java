@@ -6,17 +6,13 @@ import com.example.lume.service.ClienteService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -25,6 +21,7 @@ public class ClienteController {
 
     @Autowired
     private ClienteService clienteService;
+
 
     @Operation(summary = "Criar um novo cliente")
     @ApiResponses({
@@ -79,6 +76,11 @@ public class ClienteController {
     @GetMapping("/id/{id}")
     public ResponseEntity<Cliente> buscarPorId(@PathVariable Long id) {
         Cliente cliente = clienteService.buscarPorId(id);
+
+        if (cliente == null) {
+            return ResponseEntity.notFound().build();
+        }
+
         return ResponseEntity.ok(cliente);
     }
 
@@ -107,6 +109,11 @@ public class ClienteController {
     @GetMapping("/cpf/{cpf}")
     public ResponseEntity<Cliente> buscarPorCpf(@Valid @PathVariable String cpf) {
         Cliente cliente = clienteService.buscarPorCpf(cpf);
+
+        if (cliente == null) {
+            return ResponseEntity.notFound().build();
+        }
+
         return ResponseEntity.ok(cliente);
     }
 

@@ -13,6 +13,4 @@ public record ClienteRequestDTO(
 
         @NotBlank(message = "O CEP é obrigatório")
         String cep
-) {
-
-}
+) {}
