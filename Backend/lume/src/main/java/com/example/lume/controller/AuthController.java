@@ -1,7 +1,6 @@
 package com.example.lume.controller;
 
-import com.example.lume.repository.UserRepository;
-import com.example.lume.service.TokenService;
+import com.example.lume.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
@@ -18,10 +17,7 @@ import java.util.Map;
 public class AuthController {
 
     @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private TokenService tokenService;
+    private AuthService authService;
 
     @Operation(summary = "Realizar login e obter tokens")
     @ApiResponses({
@@ -38,20 +34,7 @@ public class AuthController {
     })
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> body) {
-
-        var user = userRepository.findByEmail(body.get("email"))
-                .orElseThrow(() -> new RuntimeException("User not found"));
-
-        if (!body.get("password").equals(user.getPassword())) {
-            return ResponseEntity.status(401).build();
-        }
-
-        var token = tokenService.gerarAccessToken(user);
-        var refresh = tokenService.gerarRefreshToken(user);
-
-        return ResponseEntity.ok(Map.of(
-                "accessToken", token,
-                "refreshToken", refresh.getToken()
-        ));
+        var tokens = authService.login(body.get("email"), body.get("password"));
+        return ResponseEntity.ok(tokens);
     }
 }
