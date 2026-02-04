@@ -2,15 +2,48 @@
 
 ## Pré-requisitos
 
+### Execução com Docker (recomendado)
+
+- Docker Desktop
+
+### Execução manual
+
 - Java 21+
 - Node.js 18+
 - npm
 
 ## Como executar
 
+### Opção 1: Docker (recomendado)
+
+```bash
+# Na pasta raiz do projeto
+docker compose up --build -d
+```
+
+Aguarde os containers iniciarem. Para verificar se estão rodando:
+
+```bash
+docker ps
+```
+
+Para parar os containers:
+
+```bash
+docker compose down
+```
+
+Para ver os logs:
+
+```bash
+docker compose logs
+```
+
+### Opção 2: Execução manual
+
 > Abra **dois terminais** separados, um para o backend e outro para o frontend.
 
-### 1. Backend (Terminal 1)
+#### 1. Backend (Terminal 1)
 
 ```bash
 # Acesse a pasta do backend
@@ -25,7 +58,7 @@ mvnw.cmd spring-boot:run
 
 Aguarde até aparecer a mensagem `Started GroupLumeApplication`. O backend estará rodando em `http://localhost:8080`.
 
-### 2. Frontend (Terminal 2)
+#### 2. Frontend (Terminal 2)
 
 ```bash
 # Acesse a pasta do frontend
@@ -39,10 +72,6 @@ npm run dev
 ```
 
 O frontend estará rodando em `http://localhost:5173`.
-
-### 3. Acessar a aplicação
-
-Com os dois servidores rodando, abra o navegador e acesse `http://localhost:5173` para a tela de login.
 
 ## Como acessar
 
@@ -91,4 +120,6 @@ As requisições autenticadas devem incluir o header `Authorization: Bearer <tok
 
 **Backend:** Java 21, Spring Boot 4.0.2, Spring Security, JWT, H2, JPA/Hibernate
 
-**Frontend:** React, Vite, React Router, html, CSS e JavaScript
+**Frontend:** React, Vite, React Router, HTML, CSS e JavaScript
+
+**DevOps:** Docker, Docker Compose, Nginx
