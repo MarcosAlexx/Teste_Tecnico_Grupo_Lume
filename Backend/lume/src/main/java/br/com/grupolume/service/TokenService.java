@@ -1,8 +1,8 @@
-package com.example.lume.service;
+package br.com.grupolume.service;
 
-import com.example.lume.model.RefreshToken;
-import com.example.lume.model.User;
-import com.example.lume.repository.RefreshTokenRepository;
+import br.com.grupolume.model.RefreshToken;
+import br.com.grupolume.model.User;
+import br.com.grupolume.repository.RefreshTokenRepository;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
