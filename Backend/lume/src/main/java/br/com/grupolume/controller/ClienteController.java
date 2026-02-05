@@ -1,8 +1,8 @@
-package com.example.lume.controller;
+package br.com.grupolume.controller;
 
-import com.example.lume.dto.ClienteRequestDTO;
-import com.example.lume.model.Cliente;
-import com.example.lume.service.ClienteService;
+import br.com.grupolume.dto.ClienteRequestDTO;
+import br.com.grupolume.model.Cliente;
+import br.com.grupolume.service.ClienteService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
