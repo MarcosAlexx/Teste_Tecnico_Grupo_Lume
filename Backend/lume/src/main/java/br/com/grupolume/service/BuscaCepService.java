@@ -1,6 +1,6 @@
-package com.example.lume.service;
+package br.com.grupolume.service;
 
-import com.example.lume.model.Endereco;
+import br.com.grupolume.model.Endereco;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
