@@ -1,4 +1,4 @@
-package com.example.lume.model;
+package br.com.grupolume.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Embeddable;
