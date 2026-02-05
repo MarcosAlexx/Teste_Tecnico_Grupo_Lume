@@ -1,4 +1,4 @@
-package com.example.lume.model;
+package br.com.grupolume.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
