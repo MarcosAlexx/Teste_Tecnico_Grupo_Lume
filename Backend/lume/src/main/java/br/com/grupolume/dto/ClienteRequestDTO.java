@@ -1,4 +1,4 @@
-package com.example.lume.dto;
+package br.com.grupolume.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import org.hibernate.validator.constraints.br.CPF;
