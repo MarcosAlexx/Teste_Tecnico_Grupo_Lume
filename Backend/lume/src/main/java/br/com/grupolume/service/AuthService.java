@@ -1,6 +1,6 @@
-package com.example.lume.service;
+package br.com.grupolume.service;
 
-import com.example.lume.repository.UserRepository;
+import br.com.grupolume.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
