@@ -1,7 +1,7 @@
-package com.example.lume.config;
+package br.com.grupolume.filter;
 
-import com.example.lume.repository.UserRepository;
-import com.example.lume.service.TokenService;
+import br.com.grupolume.repository.UserRepository;
+import br.com.grupolume.service.TokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
