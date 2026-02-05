@@ -1,9 +1,9 @@
-package com.example.lume.service;
+package br.com.grupolume.service;
 
-import com.example.lume.dto.ClienteRequestDTO;
-import com.example.lume.model.Cliente;
-import com.example.lume.model.Endereco;
-import com.example.lume.repository.ClienteRepository;
+import br.com.grupolume.dto.ClienteRequestDTO;
+import br.com.grupolume.model.Cliente;
+import br.com.grupolume.model.Endereco;
+import br.com.grupolume.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
