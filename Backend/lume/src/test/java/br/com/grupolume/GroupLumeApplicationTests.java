@@ -1,4 +1,4 @@
-package com.example.lume;
+package br.com.grupolume;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
