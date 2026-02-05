@@ -1,7 +1,7 @@
-package com.example.lume.config;
+package br.com.grupolume.config;
 
-import com.example.lume.model.User;
-import com.example.lume.repository.UserRepository;
+import br.com.grupolume.model.User;
+import br.com.grupolume.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
