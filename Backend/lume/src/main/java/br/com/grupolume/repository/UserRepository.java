@@ -1,6 +1,6 @@
-package com.example.lume.repository;
+package br.com.grupolume.repository;
 
-import com.example.lume.model.User;
+import br.com.grupolume.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
