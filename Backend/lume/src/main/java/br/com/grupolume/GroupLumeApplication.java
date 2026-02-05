@@ -1,4 +1,4 @@
-package com.example.lume;
+package br.com.grupolume;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
