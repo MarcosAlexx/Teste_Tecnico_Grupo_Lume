@@ -1,7 +1,7 @@
-package com.example.lume.repository;
+package br.com.grupolume.repository;
 
-import com.example.lume.model.RefreshToken;
-import com.example.lume.model.User;
+import br.com.grupolume.model.RefreshToken;
+import br.com.grupolume.model.User;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
